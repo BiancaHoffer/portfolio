@@ -2,7 +2,7 @@ import { GetStaticPaths, GetStaticProps } from "next"
 
 export function Project() {
   return (
-    <h1>Resumo do projeto</h1>
+    <h1>Resumo do projetoo</h1>
   )
 }
 
