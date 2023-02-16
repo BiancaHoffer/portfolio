@@ -1,12 +1,13 @@
-
-import { Swiper } from "swiper/react";
-
 import "swiper/css";
 import "swiper/css/pagination";
 
-import { Pagination, Autoplay } from "swiper";
+import { Pagination, Autoplay, Navigation } from "swiper";
 
-import { ContainerTechnologies, ContentSwiperSlide } from "./styles";
+import {
+  ContainerTechnologies,
+  ContentSwiperSlide,
+  SwiperStyle
+} from "./styles";
 
 import {
   SiSass,
@@ -24,7 +25,7 @@ export function Technologies() {
       <ContainerTechnologies>
         <h1>Principais Tecnologias</h1>
 
-        <Swiper
+        <SwiperStyle
           spaceBetween={30}
           slidesPerView={4}
           loop={true}
@@ -32,7 +33,8 @@ export function Technologies() {
             delay: 2500,
             disableOnInteraction: false,
           }}
-          modules={[Pagination, Autoplay]}
+          pagination={true}
+          modules={[Pagination, Autoplay, Navigation]}
           className="mySwiper"
         >
           <ContentSwiperSlide>
@@ -69,7 +71,7 @@ export function Technologies() {
             <SiVite size={100} color="#db2090" />
             <p>Vite</p>
           </ContentSwiperSlide>
-        </Swiper>
+        </SwiperStyle>
       </ContainerTechnologies>
     </>
   )

@@ -10,7 +10,7 @@ import { useState } from "react";
 
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Spinner } from "../Spinner";
+import { SpinnerButton } from "../SpinnerButton";
 
 const contactMeFormSchema = zod.object({
   name: zod.string(),
@@ -95,7 +95,7 @@ export function ContactMe() {
           type="submit"
           disabled={loading && true}
         >
-          {loading === true ? <Spinner /> : "Enviar"}
+          {loading === true ? <SpinnerButton /> : "Enviar"}
         </ButtonSubmit>
 
         <ToastContainer />
