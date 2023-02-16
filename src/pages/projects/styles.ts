@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import * as Popover from '@radix-ui/react-popover';
 
 export const ContainerProjects = styled.div`
   width: 100%;
