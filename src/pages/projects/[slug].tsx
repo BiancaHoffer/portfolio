@@ -6,7 +6,7 @@ export function Project() {
   )
 }
 
-export const getStaticPaths: GetStaticPaths = () => {
+/*export const getStaticPaths: GetStaticPaths = () => {
   return {
     paths: [],
     fallback: 'blocking'
@@ -20,4 +20,4 @@ export const getStaticProps: GetStaticProps = () => {
     },
     revalidate: 60 * 60 * 30
   }
-}
+}*/
