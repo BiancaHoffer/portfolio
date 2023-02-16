@@ -21,7 +21,7 @@ export default function Projects(data: Projects) {
         <title>Projetos - Bianca Hoffer</title>
       </Head>
 
-      <h1>Projetos</h1>
+      <h1>Projetoss</h1>
       <a href="/projets/aa">aa</a>
     </>
   )
