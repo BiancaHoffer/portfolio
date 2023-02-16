@@ -48,7 +48,7 @@ export default function Projects({ data }: ProjectsProps) {
   )
 }
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getStaticProps: GetStaticProps = async () => {
   const prismic = getPrismicClient({});
 
   const response = await prismic.getByType("project", {
@@ -70,8 +70,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       }
     }
   })
-
-  const teste = { data }
 
   return {
     props: {
