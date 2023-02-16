@@ -1,18 +1,20 @@
-import { Header } from '@/components/Header';
-import Head from 'next/head';
-import { useRouter } from 'next/router';
+import { AboutMe } from "@/components/AboutMe";
+import { BannerHome } from "@/components/BannerHome";
+import { ContactMe } from "@/components/ContactMe";
+import { Technologies } from "@/components/Technologies";
+import Head from "next/head";
 
 export default function Home() {
-  const { basePath } = useRouter();
-  console.log(basePath)
-
   return (
     <>
       <Head>
-        <title>Home - Bianca Hoffer</title>
+        <title>Home - Bianca Macedo</title>
       </Head>
 
-
+      <BannerHome />
+      <AboutMe />
+      <Technologies />
+      <ContactMe />
     </>
   )
 }

@@ -1,18 +1,13 @@
 import Link from "next/link";
+import { ActiveLink } from "../ActiveLink";
 import { ContactsPopover } from "../ContactsPopover";
 import { ContainerNav } from "./styles";
 
 export function NavHeader() {
   return (
     <ContainerNav>
-      <Link href="/" legacyBehavior>
-        <a>Home</a>
-      </Link>
-
-      <Link href="/projects" legacyBehavior>
-        <a>Projetos</a>
-      </Link>
-
+      <ActiveLink href='/' name="Início" />
+      <ActiveLink href='/projects' name="Projetos" />
       <ContactsPopover />
     </ContainerNav>
   )

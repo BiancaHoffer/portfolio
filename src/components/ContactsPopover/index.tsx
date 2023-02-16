@@ -29,13 +29,13 @@ export function ContactsPopover() {
             Linkedin
           </a>
 
-          <a href='mailto:bianca.mhm@gmail.com'>
+          <button id="email">
             <IoIosMail
               size={24}
               color='#db2090'
             />
             E-mail
-          </a>
+          </button>
           <Popover.Arrow
             height={8}
             width={16}

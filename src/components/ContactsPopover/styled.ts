@@ -12,6 +12,16 @@ export const Trigger = styled(Popover.Trigger)`
     justify-content: space-around;
     align-items: flex-end;
 
+    &[data-state="open"] {
+      color: ${props => props.theme["gray-10"]};
+
+      &:hover {
+        opacity: 0.8;
+        transition: opacity 0.3s;
+      }
+    }
+
+
     &:hover {
         color: ${props => props.theme["gray-10"]};
         transition: color 0.4s;
