@@ -6,11 +6,11 @@ export interface PrismicConfig {
   req?: HttpRequestLike;
 }
 
-const endpoint = process.env.PRISMIC_API_ENDPOINT
 const acessToken = process.env.PRISMIC_ACCESS_TOKEN
 
 export function getPrismicClient(config: PrismicConfig): prismic.Client {
-  const client = prismic.createClient(endpoint, {
+
+  const client = prismic.createClient("https://portfolio-by-biancahoffer.cdn.prismic.io/api/v2", {
     accessToken: acessToken,
   });
 
