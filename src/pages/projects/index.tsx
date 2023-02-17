@@ -3,8 +3,9 @@ import { asImageSrc } from "@prismicio/helpers";
 
 import { GetStaticProps } from "next";
 import Head from "next/head";
+import Link from "next/link";
 
-import { useState } from "react";
+import { ContainerProjects, ContentProjects } from "./styles";
 
 interface Projects {
   name: string;
@@ -23,18 +24,23 @@ export default function Projects({ projects }: ProjectsProps) {
         <title>Projetos - Bianca Hoffer</title>
       </Head>
 
-      <h1>Lista nome dos projetos</h1>
+      <ContainerProjects>
+        <h1>Lista nome dos projetos</h1>
+        <p>Principais projetos até o momento</p>
 
-      {projects.map(project => {
-        return (
-          <>
-            <p>{project.name}</p>
-            <img src={project.image} />
-          </>
+        <ContentProjects>
+          {projects.map(project => {
+            return (
+              <>
+                <Link href="*" key={project.name}>
+                  <img src={project.image} />
+                </Link>
+              </>
 
-        )
-      })}
-
+            )
+          })}
+        </ContentProjects>
+      </ContainerProjects>
     </>
   )
 }
