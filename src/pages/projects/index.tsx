@@ -39,7 +39,8 @@ export const getStaticProps: GetStaticProps = async () => {
     orderings: {
       field: "document.first_publication_date",
       direction: "desc",
-    }
+    },
+    fetch: ['project.name', 'project.image']
   })
 
   const projects = response.results.map((project) => {
@@ -50,7 +51,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: {
-      projects: projects,
+      projects,
     },
     revalidate: 60 * 60 * 24,
   }
