@@ -57,7 +57,6 @@ export const ContentProjects = styled.div`
     &:hover {
       opacity: 10;
       transition: opacity 0.5s;
-
     }
   }
 `

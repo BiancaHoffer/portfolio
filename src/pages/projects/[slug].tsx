@@ -1,12 +1,14 @@
 import { getPrismicClient } from "@/services/prismic"
-import { GetStaticPaths, GetStaticProps } from "next"
+import { GetStaticPaths, GetStaticPathsContext, GetStaticProps } from "next"
 import { asImageSrc, asText } from "@prismicio/helpers";
 
 import { ContainerProject } from "./styles";
 import Link from "next/link";
 import { TechnologiesPopover } from "@/components/TechnologiesPopover";
 
-export interface PropsPost {
+import { ParsedUrlQuery } from 'querystring';
+
+export interface Project {
   uid: string;
   name: string;
   image: string;
@@ -19,26 +21,26 @@ export interface PropsPost {
     icon: {
       url: string;
       field: string;
-    }
+    };
   }[];
 }
 
-export interface Params {
-  params: {
-    slug: string;
-  }
-}
-
 interface ProjectProps {
-  data: PropsPost
+  project: Project;
 }
 
-export default function Project({ data }: ProjectProps) {
+interface Params extends ParsedUrlQuery {
+  slug: string;
+}
+
+export default function Project({ project }: ProjectProps) {
+  const { name, text, redirect, technology } = project;
+
   return (
     <ContainerProject>
-      <h1>{data.name}</h1>
+      <h1>{name}</h1>
 
-      {data.redirect.map(red => {
+      {redirect.map(red => {
         return (
           <Link href={red.link}>
             <img src={red.icon} />
@@ -46,17 +48,25 @@ export default function Project({ data }: ProjectProps) {
         )
       })}
 
-      <p>{data.text}</p>
-      <TechnologiesPopover technologies={data.technology} />
+      <p>{text}</p>
+      <TechnologiesPopover technologies={technology} />
     </ContainerProject>
   )
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
+  const prismic = getPrismicClient({});
+
+  const response = await prismic.getByType("project", {})
+  const paths = response.results.map((result) => ({
+    params: {
+      slug: result.uid,
+    },
+  }));
   return {
     paths: [],
-    fallback: 'blocking'
-  }
+    fallback: "blocking",
+  };
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
@@ -66,7 +76,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   const response = await prismic.getByUID('project', String(slug), {})
 
-  const data = {
+  const project = {
     uid: response.uid,
     name: response.data.name,
     image: asImageSrc(response.data.image),
@@ -89,8 +99,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   return {
     props: {
-      data
+      project
     },
-    //revalidate: 60 * 60 * 30
+    revalidate: 60 * 60,
   }
 }
