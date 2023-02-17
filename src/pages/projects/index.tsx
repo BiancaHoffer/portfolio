@@ -1,4 +1,6 @@
 import { getPrismicClient } from "@/services/prismic";
+import { asImageSrc } from "@prismicio/helpers";
+
 import { GetStaticProps } from "next";
 import Head from "next/head";
 
@@ -6,6 +8,7 @@ import { useState } from "react";
 
 interface Projects {
   name: string;
+  image: string;
 }
 
 interface ProjectsProps {
@@ -24,7 +27,11 @@ export default function Projects({ projects }: ProjectsProps) {
 
       {projects.map(project => {
         return (
-          <p>{project.name}</p>
+          <>
+            <p>{project.name}</p>
+            <img src={project.image} />
+          </>
+
         )
       })}
 
@@ -46,8 +53,11 @@ export const getStaticProps: GetStaticProps = async () => {
   const projects = response.results.map((project) => {
     return {
       name: project.data.name,
+      image: asImageSrc(project.data.image)
     }
   })
+
+  console.log(projects)
 
   return {
     props: {
