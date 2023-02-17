@@ -8,14 +8,13 @@ import Link from "next/link";
 import { ContainerProjects, ContentProjects } from "../../styles/projects";
 
 interface Projects {
-  name: string;
+  uid: string;
   image: string;
 }
 
 interface ProjectsProps {
-  projects: Projects[]
+  projects: Projects[];
 }
-
 
 export default function Projects({ projects }: ProjectsProps) {
   return (
@@ -32,7 +31,7 @@ export default function Projects({ projects }: ProjectsProps) {
           {projects.map(project => {
             return (
               <>
-                <Link href="*" key={project.name}>
+                <Link href={`/projects/${project.uid}`} key={project.uid}>
                   <img src={project.image} />
                 </Link>
               </>
@@ -53,17 +52,15 @@ export const getStaticProps: GetStaticProps = async () => {
       field: "document.first_publication_date",
       direction: "desc",
     },
-    fetch: ['project.name', 'project.image']
+    fetch: ['project.image', 'project.uid']
   })
 
   const projects = response.results.map((project) => {
     return {
-      name: project.data.name,
+      uid: project.uid,
       image: asImageSrc(project.data.image)
     }
   })
-
-  console.log(projects)
 
   return {
     props: {

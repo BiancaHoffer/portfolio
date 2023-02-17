@@ -4,13 +4,12 @@ export const ContainerProjects = styled.div`
   width: 100%;
   max-width: 1140px;
   margin: 0 auto;
-
   padding: 8rem 2.5rem;
 
   h1 {
-  font-size: 4rem;
-  margin-bottom: 1.5rem
-}
+    font-size: 4rem;
+    margin-bottom: 1.5rem
+  }
 
   p {
     font-size: 2rem;
@@ -31,15 +30,6 @@ export const ContentProjects = styled.div`
     cursor: pointer;
     opacity: 0.8;
 
-    p {
-      position: absolute;
-      font-size: 2rem;
-      padding: 1rem;
-      margin: 2rem;
-      font-weight: bolder;
-      color: ${props => props.theme["gray-10"]}
-    }
-
     img {
       width: 100%;
       height: 100%;
@@ -48,10 +38,6 @@ export const ContentProjects = styled.div`
 
     &:nth-child(3n) {
       grid-column: 1 / 3;
-
-      p {
-        font-size: 4rem;
-      }
     }
 
     &:hover {
