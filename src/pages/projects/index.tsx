@@ -5,7 +5,7 @@ import { GetStaticProps } from "next";
 import Head from "next/head";
 import Link from "next/link";
 
-import { ContainerProjects, ContentProjects } from "./styles";
+import { ContainerProjects, ContentProjects } from "../../styles/projects";
 
 interface Projects {
   name: string;
