@@ -13,6 +13,7 @@
     "@next/font": "13.1.6",
     "@prismicio/client": "^6.7.3",
     "@prismicio/next": "^1.0.2",
+    "@prismicio/react": "^2.5.2",
     "@radix-ui/react-id": "^1.0.0",
     "@radix-ui/react-popover": "^1.0.3",
     "@radix-ui/react-toast": "^1.1.2",

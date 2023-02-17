@@ -35,7 +35,12 @@ export default function Projects({ projects }: ProjectsProps) {
 export const getStaticProps: GetStaticProps = async () => {
   const prismic = getPrismicClient({});
 
-  const response = await prismic.getByType("project", {})
+  const response = await prismic.getByType("project", {
+    orderings: {
+      field: "document.first_publication_date",
+      direction: "desc",
+    }
+  })
 
   const projects = response.results.map((project) => {
     return {
