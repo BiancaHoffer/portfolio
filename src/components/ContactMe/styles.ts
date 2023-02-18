@@ -13,6 +13,13 @@ export const ContainerContactMe = styled.div`
         font-size: 4rem;
         margin-bottom: 4rem;
     }
+
+    @media (max-width: 820px) {
+        h1 {
+        width: 100%;
+        text-align: center;
+        }
+    }
 `
 
 export const Form = styled.form`
@@ -20,6 +27,10 @@ export const Form = styled.form`
     grid-template-columns: auto auto;
     grid-template-rows:  auto auto auto;
     gap: 1rem;
+
+    @media (max-width: 520px) {
+        grid-template-columns: 1fr;
+    }
 
     input, textarea {
         padding: 1rem 1.5rem;
@@ -54,6 +65,11 @@ export const Form = styled.form`
         width: 100%;
         resize: vertical;
         margin-top: 1rem;
+
+        @media (max-width: 520px) {
+            grid-column: 1 / 1;
+            grid-template-columns: 1fr;
+        }
     }
 `
 
@@ -79,5 +95,9 @@ export const ButtonSubmit = styled.button`
         background-color: ${props => props.theme["pink-500"]};
         opacity: 0.4;
         transition: opacity 0.4s;
+    }
+
+    @media (max-width: 520px) {
+        width: 100%;
     }
 `

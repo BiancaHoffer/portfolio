@@ -1,34 +1,34 @@
 import * as Popover from '@radix-ui/react-popover';
-import { Content, Tigger } from './styles';
+import { ContainerTechnologiesPopover, Content, Tigger } from './styles';
 
-interface TechnologiesPopover {
-  icon: {
-    field: string;
-    url: string;
-  };
+interface Technologies {
+  field: string;
+  icon: string
 }
 
 interface TechnologiesPopoverProps {
-  technologies: TechnologiesPopover[];
+  technology: Technologies[]
 }
 
-export function TechnologiesPopover({ technologies }: TechnologiesPopoverProps) {
+export function TechnologiesPopover({ technology }: TechnologiesPopoverProps) {
   return (
-    <>
-      {technologies.map(tec => {
+    <ContainerTechnologiesPopover>
+      <h2>Principais tecnologias utilizadas: </h2>
+
+      {technology.map(tec => {
         return (
-          <Popover.Root key={tec.icon.url}>
+          <Popover.Root key={tec.icon}>
             <Tigger>
-              <img src={tec.icon.url} />
+              <img src={tec.icon} />
             </Tigger>
             <Popover.Portal>
               <Content>
-                <div>{tec.icon.field}</div>
+                <div>{tec.field}</div>
               </Content>
             </Popover.Portal>
           </Popover.Root>
         )
       })}
-    </>
+    </ContainerTechnologiesPopover>
   )
 }

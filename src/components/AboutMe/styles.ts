@@ -10,6 +10,10 @@ export const ContainerAboutMe = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 5rem;
+
+  @media (max-width: 820px) {
+    flex-direction: column;
+  }
 `
 
 export const Resume = styled.div`
@@ -29,6 +33,13 @@ export const Resume = styled.div`
     text-align: justify;
     line-height: 3.2rem;
   }
+
+  @media (max-width: 820px) {
+    h1 {
+      width: 100%;
+      text-align: center;
+    }
+  }
 `
 
 
@@ -37,6 +48,11 @@ export const Memoji = styled.div`
   display: flex;
   justify-content:end;
   align-items: center;
+
+  @media (max-width: 820px) {
+    width: 100%;
+    justify-content: center;
+  }
 
   span {
     background-color: ${props => props.theme["gray-600"]};

@@ -23,6 +23,7 @@ export const ContainerBannerHome = styled.div`
       margin: 0 auto;
       font-size: 40px;
       color: white;
+      padding: 0.4rem;
 
       display: flex;
       justify-content: center;

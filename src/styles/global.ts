@@ -60,4 +60,10 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 87.5%;
       }
     }
+
+    @media (max-width: 620px) {
+      html {
+        font-size: 70%;
+      }
+    }
 `;

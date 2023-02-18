@@ -24,7 +24,7 @@ export default function Projects({ projects }: ProjectsProps) {
       </Head>
 
       <ContainerProjects>
-        <h1>Lista nome dos projetos</h1>
+        <h1>Projetos</h1>
         <p>Principais projetos até o momento</p>
 
         <ContentProjects>
