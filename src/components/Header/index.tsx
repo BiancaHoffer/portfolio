@@ -3,7 +3,7 @@ import { ContainerHeader, ContentHeader } from "./styles";
 
 export function Header() {
     return (
-        <ContainerHeader>
+        <ContainerHeader id="header">
             <ContentHeader>
                 <span />
                 <NavHeader />

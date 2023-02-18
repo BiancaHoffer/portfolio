@@ -73,7 +73,7 @@ export function ContactMe() {
   }
 
   return (
-    <ContainerContactMe>
+    <ContainerContactMe id="email">
       <h1>Entre em contato</h1>
 
       <Form onSubmit={handleSubmit(handleSubmitMessage)}>

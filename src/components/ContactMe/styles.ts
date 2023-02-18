@@ -4,9 +4,7 @@ export const ContainerContactMe = styled.div`
     width: 100%;
     max-width: 1140px;
     margin: 0 auto;
-
     border-top: 1px solid ${props => props.theme["gray-500"]};
-
     padding: 12rem 2.5rem;
 
     h1 {
