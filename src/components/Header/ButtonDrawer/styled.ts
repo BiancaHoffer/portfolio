@@ -12,7 +12,7 @@ export const CotainerButtonDrawer = styled.button<ButtonDrawerProps>`
     position: ${props => props.active ? "absolute" : "fixed"};;
     z-index: 5;
     right: 3rem;
-    top: 2rem;
+    top: ${props => props.active ? "2rem" : "4.5rem"};
 
     background-color: transparent;
     border: none;

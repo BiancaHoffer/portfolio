@@ -8,7 +8,7 @@ export const ContainerNav = styled.nav<ContainerNavProps>`
     display: none;
 
     @media (max-width: 720px) {
-        display: ${props => props.active ? "none" : "flex"};;
+        display: ${props => props.active ? "none" : "flex"};
         position: ${props => props.active ? "none" : "fixed"};
         flex-direction: column;
         align-items: center;
@@ -26,7 +26,7 @@ export const ContainerNav = styled.nav<ContainerNavProps>`
         border-left: 1px solid ${props => props.theme["gray-600"]};
     
         h2 {
-            margin-top: 2.5rem;
+            margin-top: 8rem;
             display: block;
             width: 100%;
             text-align: center;
