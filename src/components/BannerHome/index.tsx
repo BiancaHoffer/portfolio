@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { useState, useEffect } from "react"
 import { ContainerBannerHome } from "./styled";
 
 export function BannerHome() {

@@ -4,7 +4,6 @@ export const ContainerAboutMe = styled.div`
   width: 100%;
   max-width: 1140px;
   margin: 0 auto;
-
   padding: 12rem 2.5rem;
 
   display: flex;
@@ -41,7 +40,6 @@ export const Resume = styled.div`
     }
   }
 `
-
 
 export const Memoji = styled.div`
   width: 70%;

@@ -26,7 +26,6 @@ export const ContentProjects = styled.div`
     grid-template-columns: 1fr;
   }
 
-  
   a {
     width: 100%;
     height: 100%;

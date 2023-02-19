@@ -1,10 +1,10 @@
-import { SwiperTechnologies } from "../SwiperTechnologies";
-import { SwiperTechnologiesMobile } from "../SwiperTechnologiesMobile";
+import { SwiperTechnologies } from "./SwiperTechnologies";
+import { SwiperTechnologiesMobile } from "./SwiperTechnologiesMobile";
 import {
-  ContainerTechnologies, TechnologiesMobile, TechnologiesWeb
+  ContainerTechnologies,
+  TechnologiesMobile,
+  TechnologiesWeb
 } from "./styles";
-
-
 
 export function Technologies() {
   return (

@@ -32,6 +32,5 @@ export const LinkBack = styled(Link)`
 
   width: 100%;
   border-bottom: 1px solid ${props => props.theme["gray-600"]};
-    
-  `
+`
 
