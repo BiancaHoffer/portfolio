@@ -28,6 +28,7 @@ export const Form = styled.form`
 
     @media (max-width: 520px) {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 
     input, textarea {
@@ -38,7 +39,6 @@ export const Form = styled.form`
         border: 1px solid ${props => props.theme["gray-500"]};
         color: ${props => props.theme["gray-10"]};
 
-        
         &:hover {
             border: 1px solid ${props => props.theme["pink-500"]};
             transition: border 0.3s;
@@ -67,6 +67,7 @@ export const Form = styled.form`
         @media (max-width: 520px) {
             grid-column: 1 / 1;
             grid-template-columns: 1fr;
+            margin-top: 0;
         }
     }
 `
@@ -88,7 +89,6 @@ export const ButtonSubmit = styled.button`
     }
 
     &:disabled {
-        //background-color: red;
         cursor: not-allowed;
         background-color: ${props => props.theme["pink-500"]};
         opacity: 0.4;
@@ -97,5 +97,6 @@ export const ButtonSubmit = styled.button`
 
     @media (max-width: 520px) {
         width: 100%;
+        margin-top: 0rem;
     }
 `

@@ -35,7 +35,7 @@ export default function Project({ project }: ProjectProps) {
 
   return (
     <>
-      <ContainerProject>
+      <ContainerProject data-aos="fade-down">
         <LinkBack href="/projects">
           <MdOutlineArrowBackIosNew size={26} color="#585656" />
         </LinkBack >
@@ -44,7 +44,7 @@ export default function Project({ project }: ProjectProps) {
 
         {redirect.map(red => {
           return (
-            <Link href={String(red.url)} key={red.url}>
+            <Link href={String(red.url)} key={red.url} data-aos="zoom-in">
               <img src={red.icon} alt={red.url} />
             </Link>
           )

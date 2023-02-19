@@ -73,25 +73,29 @@ export function ContactMe() {
   }
 
   return (
-    <ContainerContactMe id="email">
+    <ContainerContactMe id="email" data-aos="fade-down">
       <h1>Entre em contato</h1>
 
       <Form onSubmit={handleSubmit(handleSubmitMessage)}>
         <input
+          data-aos="zoom-in"
           type="text"
           placeholder="Nome"
           {...register("name")}
         />
         <input
+          data-aos="zoom-in"
           type="email"
           placeholder="E-mail"
           {...register("email")}
         />
         <textarea
+          data-aos="zoom-in"
           placeholder="Sua mensagem"
           {...register("content")}
         />
         <ButtonSubmit
+          data-aos="zoom-in"
           type="submit"
           disabled={loading && true}
         >

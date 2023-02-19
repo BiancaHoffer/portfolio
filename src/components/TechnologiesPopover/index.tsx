@@ -17,7 +17,7 @@ export function TechnologiesPopover({ technology }: TechnologiesPopoverProps) {
 
       {technology.map(tec => {
         return (
-          <Popover.Root key={tec.icon}>
+          <Popover.Root key={tec.icon} >
             <Tigger>
               <img src={tec.icon} />
             </Tigger>

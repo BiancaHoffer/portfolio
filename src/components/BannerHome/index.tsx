@@ -16,10 +16,10 @@ export function BannerHome() {
         <source src={video} />
       </video>
 
-      <div>
-        <h2>Olá, meu nome é Bianca 👋</h2>
+      <div data-aos="fade-down">
+        <h2 >Olá, meu nome é Bianca 👋</h2>
         <h1>Sou desenvolvedora <br /> front-end</h1>
-        <Link href={"/projects"} >
+        <Link href={"/projects"} data-aos="zoom-in">
           Projetos
         </Link>
       </div>

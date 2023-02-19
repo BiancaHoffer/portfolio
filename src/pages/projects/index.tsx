@@ -23,7 +23,7 @@ export default function Projects({ projects }: ProjectsProps) {
         <title>Projetos - Bianca Hoffer</title>
       </Head>
 
-      <ContainerProjects>
+      <ContainerProjects data-aos="fade-down">
         <h1>Projetos</h1>
         <p>Principais projetos até o momento</p>
 
@@ -32,7 +32,7 @@ export default function Projects({ projects }: ProjectsProps) {
             return (
               <>
                 <Link href={`/projects/${project.uid}`} key={project.uid}>
-                  <img src={project.image} />
+                  <img src={project.image} data-aos="zoom-in" />
                 </Link>
               </>
 

@@ -27,6 +27,7 @@ export function SwiperTechnologies() {
       pagination={true}
       modules={[Pagination, Autoplay, Navigation]}
       className="mySwiper"
+      data-aos="zoom-in"
     >
       <ContentSwiperSlide>
         <SiHtml5 size={100} color="#db2090" />

@@ -9,7 +9,7 @@ import {
 export function Technologies() {
   return (
     <>
-      <ContainerTechnologies>
+      <ContainerTechnologies data-aos="fade-down">
         <h1>Principais Tecnologias</h1>
 
         <TechnologiesWeb>

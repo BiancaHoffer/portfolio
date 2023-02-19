@@ -2,7 +2,7 @@ import { ContainerAboutMe, Memoji, Resume } from "./styles";
 
 export function AboutMe() {
   return (
-    <ContainerAboutMe>
+    <ContainerAboutMe data-aos="fade-down">
       <Resume>
         <h1>Sobre mim</h1>
         <p>Sou desenvolvedora desde 2021, focada em web e mobile.
@@ -12,7 +12,7 @@ export function AboutMe() {
         </p>
       </Resume>
 
-      <Memoji className="memoji-about-me">
+      <Memoji className="memoji-about-me" data-aos="zoom-in">
         <span>
           <img src="/images/me.svg" alt="Memoji" />
         </span>
