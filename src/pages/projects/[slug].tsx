@@ -2,9 +2,11 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import Link from "next/link";
 
 import { getPrismicClient } from "@/services/prismic";
-import { ContainerProject } from "@/styles/project";
+import { ContainerProject, LinkBack } from "@/styles/project";
 import { asImageSrc, asText, asLink } from "@prismicio/helpers";
 import { TechnologiesPopover } from "@/components/TechnologiesPopover";
+
+import { MdOutlineArrowBackIosNew } from "react-icons/md";
 
 interface Project {
   uid: string;
@@ -34,6 +36,10 @@ export default function Project({ project }: ProjectProps) {
   return (
     <>
       <ContainerProject>
+        <LinkBack href="/projects">
+          <MdOutlineArrowBackIosNew size={26} color="#585656" />
+        </LinkBack >
+
         <h1>{title}</h1>
 
         {redirect.map(red => {

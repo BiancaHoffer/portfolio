@@ -26,29 +26,27 @@ export const ContentProjects = styled.div`
     grid-template-columns: 1fr;
   }
 
-  @media (min-width: 721px) {
-      &:nth-child(3n) {
-        grid-column: 1 / 3;
-      }
-    }
-
+  
   a {
-    display: block;
     width: 100%;
     height: 100%;
-    position: relative;
     cursor: pointer;
 
     img {
       width: 100%;
       height: 100%;
-      position: -webkit-sticky;
       border-radius: 4px;
     }
 
     &:hover {
       opacity: 0.8;
       transition: opacity 0.5s;
+    }
+
+    @media (min-width: 721px) {
+      &:nth-child(3n) {
+        grid-column: 1 / 3;
+      }    
     }
   }
 `

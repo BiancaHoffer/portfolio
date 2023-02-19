@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Swiper } from "swiper/react";
+import Link from "next/link";
 
 export const ContainerProject = styled.div`
   width: 100%;
@@ -22,5 +22,16 @@ export const ContainerProject = styled.div`
   p {
     font-size: 1.5rem;
     text-align: justify;
-  }
+  } 
 `
+
+export const LinkBack = styled(Link)`
+  padding-bottom: 2rem;
+  margin-bottom: 4rem;
+  display: inline-block;
+
+  width: 100%;
+  border-bottom: 1px solid ${props => props.theme["gray-600"]};
+    
+  `
+

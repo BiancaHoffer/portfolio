@@ -8,7 +8,7 @@ export function Header() {
       <ContentHeader>
         <span />
         <NavWeb />
-        <ButtonDrawer />
+        <span />
       </ContentHeader>
     </ContainerHeader>
   )
