@@ -21,7 +21,7 @@ export function ContactsPopover() {
       <Trigger>
         Contato
         <IoMdArrowDropdown
-          size={24}
+          size={16}
           color='#db2090'
         />
       </Trigger>

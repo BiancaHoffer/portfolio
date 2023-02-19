@@ -1,11 +1,15 @@
-import Link from "next/link";
 import { ActiveLink } from "../ActiveLink";
 import { ContactsPopover } from "../ContactsPopover";
 import { ContainerNav } from "./styles";
 
-export function NavHeader() {
+interface NavHeaderProps {
+  activeDrawer: boolean;
+}
+
+export function NavMobile({ activeDrawer }: NavHeaderProps) {
   return (
-    <ContainerNav>
+    <ContainerNav active={activeDrawer}>
+      <h2>Navegação</h2>
       <ActiveLink href='/' name="Início" />
       <ActiveLink href='/projects' name="Projetos" />
       <ContactsPopover />

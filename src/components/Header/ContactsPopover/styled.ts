@@ -10,7 +10,7 @@ export const Trigger = styled(Popover.Trigger)`
 
     display: flex;
     justify-content: space-around;
-    align-items: flex-end;
+    align-items: center;
 
     &[data-state="open"] {
       color: ${props => props.theme["gray-10"]};
@@ -33,6 +33,7 @@ export const Content = styled(Popover.Content)`
     padding: 2rem;
     border-radius: 4px;
     width: 12rem;
+    z-index: 1000;
 
     a {
       display: flex;

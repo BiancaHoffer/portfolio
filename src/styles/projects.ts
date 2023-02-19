@@ -20,7 +20,17 @@ export const ContainerProjects = styled.div`
 export const ContentProjects = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: .1rem;
+  gap: .2rem;
+
+  @media (max-width: 720px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 721px) {
+      &:nth-child(3n) {
+        grid-column: 1 / 3;
+      }
+    }
 
   a {
     display: block;
@@ -28,20 +38,16 @@ export const ContentProjects = styled.div`
     height: 100%;
     position: relative;
     cursor: pointer;
-    opacity: 0.8;
 
     img {
       width: 100%;
       height: 100%;
       position: -webkit-sticky;
-    }
-
-    &:nth-child(3n) {
-      grid-column: 1 / 3;
+      border-radius: 4px;
     }
 
     &:hover {
-      opacity: 12;
+      opacity: 0.8;
       transition: opacity 0.5s;
     }
   }

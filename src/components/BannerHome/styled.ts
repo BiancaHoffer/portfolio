@@ -6,7 +6,7 @@ export const ContainerBannerHome = styled.div`
     background-size: cover;
     background-position: center center;
     width: 100%;
-    height: calc(100vh - 6.25rem) ;
+    height: calc(100vh - 6.25rem);
 
     video {
       position: absolute;

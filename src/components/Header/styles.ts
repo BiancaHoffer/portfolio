@@ -5,6 +5,10 @@ export const ContainerHeader = styled.header`
     background-color: ${props => props.theme["gray-800"]};
     border-bottom: 1px solid ${props => props.theme["gray-600"]};
     height: 6.25rem;
+
+    @media (max-width: 721px) {
+       
+    }
 `
 
 export const ContentHeader = styled.div`
@@ -17,4 +21,10 @@ export const ContentHeader = styled.div`
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-content: center;
+
 `
+
+export const ContentHeaderMobile = styled.div`
+    
+`
+
