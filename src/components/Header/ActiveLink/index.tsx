@@ -4,9 +4,10 @@ import { NavLinkActive, NavLinkInactive } from "./styles";
 interface ActiveLinkProps {
   href: string;
   name: string;
+  onClick?: () => void;
 }
 
-export function ActiveLink({ href, name }: ActiveLinkProps) {
+export function ActiveLink({ href, name, onClick }: ActiveLinkProps) {
   const { asPath } = useRouter();
 
   if (asPath === href) {
@@ -18,7 +19,7 @@ export function ActiveLink({ href, name }: ActiveLinkProps) {
   }
 
   return (
-    <NavLinkInactive href={href}>
+    <NavLinkInactive href={href} onClick={onClick}>
       {name}
     </NavLinkInactive>
   )

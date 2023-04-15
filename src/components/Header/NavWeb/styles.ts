@@ -15,7 +15,8 @@ export const ContainerNav = styled.nav`
 
     padding: 0;
 
-    @media (max-width: 720px) {
-        //display: none;
+    
+    @media (max-width: 719px) {
+       display: none;
     }
 `;

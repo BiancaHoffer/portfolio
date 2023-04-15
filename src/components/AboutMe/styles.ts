@@ -58,7 +58,6 @@ export const Memoji = styled.div`
     height: 18rem;
     padding: 2rem;
     border-radius: 50%;
-    
     display: flex;
     justify-content: center;
     align-items: center;
