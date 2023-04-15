@@ -12,6 +12,7 @@ import {
   SiHtml5,
   SiReact,
   SiNodedotjs,
+  SiWordpress,
 } from "react-icons/si"
 
 export function SwiperTechnologies() {
@@ -62,6 +63,11 @@ export function SwiperTechnologies() {
       <ContentSwiperSlide>
         <SiVite size={100} color="#db2090" />
         <p>Vite</p>
+      </ContentSwiperSlide>
+
+      <ContentSwiperSlide>
+        <SiWordpress size={60} color="#db2090" />
+        <p>WordPress</p>
       </ContentSwiperSlide>
     </SwiperStyle>
   )
