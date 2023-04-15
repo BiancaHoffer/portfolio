@@ -20,7 +20,7 @@ export function Drawer({ isOpen, setIsOpen }: DrawerProps) {
         <nav>
           <ActiveLink href='/' name="Início" onClick={() => setIsOpen(false)} />
           <ActiveLink href='/projects' name="Projetos" onClick={() => setIsOpen(false)} />
-          <ContactsPopover />
+          <ContactsPopover setIsOpen={setIsOpen} />
         </nav>
       </ContentDrawer>
       <section

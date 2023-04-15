@@ -85,14 +85,14 @@ export const ButtonSubmit = styled.button`
 
     &:hover {
         background-color: ${props => props.theme["pink-500"]};
-        transition: background 0.4s;
+        transition: 0.2s;
     }
 
     &:disabled {
         cursor: not-allowed;
         background-color: ${props => props.theme["pink-500"]};
         opacity: 0.4;
-        transition: opacity 0.4s;
+        transition: opacity 0.2s;
     }
 
     @media (max-width: 520px) {

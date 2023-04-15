@@ -3,7 +3,7 @@ import * as Popover from '@radix-ui/react-popover';
 
 export const Trigger = styled(Popover.Trigger)`
     background-color: transparent;
-    font-size: 1.2rem;
+    font-size: 21px;
     font-weight: 700;
     color: ${props => props.theme["gray-400"]};
     border: none;
@@ -21,7 +21,6 @@ export const Trigger = styled(Popover.Trigger)`
       }
     }
 
-
     &:hover {
         color: ${props => props.theme["gray-10"]};
         transition: color 0.4s;
@@ -32,7 +31,7 @@ export const Content = styled(Popover.Content)`
     background-color: ${props => props.theme["gray-600"]};
     padding: 2rem;
     border-radius: 4px;
-    width: 12rem;
+    min-width: 13rem;
     z-index: 1000;
 
     a {

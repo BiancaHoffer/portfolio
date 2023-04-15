@@ -47,9 +47,11 @@ export const ContainerBannerHome = styled.div`
         border-radius: 4px;
         font-weight: bold;
 
+       
+
         &:hover {
-          opacity: 0.7;
-          transition: opacity 0.3s;
+          transition: 0.3s;
+          background-color: ${props => props.theme["gray-600"]};
         }
       }
   }

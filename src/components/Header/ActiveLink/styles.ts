@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const NavLinkActive = styled(Link)`
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 22px;
   color: ${props => props.theme["gray-10"]};
   cursor: pointer;
 
@@ -15,7 +15,7 @@ export const NavLinkActive = styled(Link)`
 
 export const NavLinkInactive = styled(Link)`
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 21px;
   color: ${props => props.theme["gray-400"]};
   cursor: pointer;
 

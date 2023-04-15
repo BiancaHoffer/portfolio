@@ -13,8 +13,11 @@ import {
 
 import { useRouter } from 'next/router';
 
+interface ContactsPopoverProps {
+  setIsOpen?: any;
+}
 
-export function ContactsPopover() {
+export function ContactsPopover({ setIsOpen }: ContactsPopoverProps) {
   const { asPath } = useRouter();
 
   return (
@@ -28,39 +31,20 @@ export function ContactsPopover() {
       </Trigger>
       <Popover.Portal>
         <Content>
-          <Link href={String(process.env.NEXT_PUBLIC_URL_GITHUB)} target="_blank">
+          <Link style={{ fontSize: '18px' }} href={String(process.env.NEXT_PUBLIC_URL_GITHUB)} target="_blank">
             <IoLogoGithub
               size={24}
               color='#db2090'
             />
             GitHub
           </Link>
-          <Link href={String(process.env.NEXT_PUBLIC_URL_LINKEDIN)} target="_blank">
+          <Link style={{ fontSize: '18px' }} href={String(process.env.NEXT_PUBLIC_URL_LINKEDIN)} target="_blank">
             <IoLogoLinkedin
               size={24}
               color='#db2090'
             />
             Linkedin
           </Link>
-
-          {asPath === "/projects" ?
-            <></>
-            :
-            <LinkReactScroll
-              to="email"
-              activeClass="active"
-              spy={true}
-              smooth={true}
-              offset={50}
-              duration={700}
-            >
-              <IoIosMail
-                size={24}
-                color='#db2090'
-              />
-              E-mail
-            </LinkReactScroll>
-          }
           <Popover.Arrow
             height={8}
             width={16}
