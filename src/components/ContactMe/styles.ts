@@ -74,7 +74,7 @@ export const Form = styled.form`
 
 export const ButtonSubmit = styled.button`
     border-radius: 4px;
-    background-color: ${props => props.theme["gray-600"]};
+    background-color: ${props => props.theme["pink-500"]};
     border: 0;
     color: ${props => props.theme["gray-10"]};
     padding:  1rem;
@@ -84,7 +84,7 @@ export const ButtonSubmit = styled.button`
     margin-top: 1rem;
 
     &:hover {
-        background-color: ${props => props.theme["pink-500"]};
+        opacity: 0.4;
         transition: 0.2s;
     }
 
