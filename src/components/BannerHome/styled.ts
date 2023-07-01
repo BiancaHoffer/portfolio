@@ -23,6 +23,12 @@ export const ContainerBannerHome = styled.div`
       bottom: 20px;
     }
 
+    @media (max-width: 820px) {
+      .div-icon {
+        display: none;
+      }
+    }
+
     div {
       position: absolute;
       height: calc(100vh - 6.25rem);
@@ -59,8 +65,6 @@ export const ContainerBannerHome = styled.div`
           transition: 0.3s;
           background-color: ${props => props.theme["gray-600"]};
         }
-
-        
       }
   }
 `

@@ -70,6 +70,12 @@ export const Form = styled.form`
             margin-top: 0;
         }
     }
+
+    textarea, input, button {
+        @media (max-width: 640px) {
+            font-size: 1.5rem;
+        }
+    }
 `
 
 export const ButtonSubmit = styled.button`

@@ -10,7 +10,7 @@ export const ContainerAboutMe = styled.div`
   justify-content: space-between;
   gap: 5rem;
 
-  @media (max-width: 820px) {
+  @media (max-width: 941px) {
     flex-direction: column;
   }
 `
@@ -21,6 +21,10 @@ export const Resume = styled.div`
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
+
+  @media (max-width: 941px) {
+    width: 100%;
+  }
 
   h1 {
     font-size: 4rem;
@@ -39,6 +43,8 @@ export const Resume = styled.div`
       text-align: center;
     }
   }
+
+  
 `
 
 export const Memoji = styled.div`
