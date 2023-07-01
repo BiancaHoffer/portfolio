@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ContainerBannerHome } from "./styled";
+import { BsFillArrowDownCircleFill } from "react-icons/bs";
 
 export function BannerHome() {
   const video = "/videos/galaxy.mp4"
@@ -21,6 +22,10 @@ export function BannerHome() {
         <Link href={"/projects"} data-aos="zoom-in">
           Projetos
         </Link>
+      </div>
+
+      <div className="div-icon">
+        <BsFillArrowDownCircleFill size={60} />
       </div>
     </ContainerBannerHome>
   )

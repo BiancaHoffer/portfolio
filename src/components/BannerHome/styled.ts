@@ -6,13 +6,21 @@ export const ContainerBannerHome = styled.div`
     background-size: cover;
     background-position: center center;
     width: 100%;
-    height: calc(100vh - 6.25rem);
+    height: calc(90vh - 6.25rem);
 
     video {
       position: absolute;
       width: 100%;
-      height: calc(100vh - 6.25rem);
+      height: calc(90vh - 6.25rem);
       object-fit: cover; 
+    }
+
+    .div-icon {
+      width: 100%;
+      height: 100px;
+      margin: 0 auto;
+      position: absolute;
+      bottom: 20px;
     }
 
     div {
@@ -47,12 +55,12 @@ export const ContainerBannerHome = styled.div`
         border-radius: 4px;
         font-weight: bold;
 
-       
-
         &:hover {
           transition: 0.3s;
           background-color: ${props => props.theme["gray-600"]};
         }
+
+        
       }
   }
 `

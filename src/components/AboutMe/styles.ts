@@ -16,7 +16,7 @@ export const ContainerAboutMe = styled.div`
 `
 
 export const Resume = styled.div`
-  width: 100%;
+  width: 70%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -28,7 +28,7 @@ export const Resume = styled.div`
   }
 
   p {
-    font-size: 2rem;
+    font-size: 1.7rem;
     text-align: justify;
     line-height: 3.2rem;
   }
@@ -42,7 +42,7 @@ export const Resume = styled.div`
 `
 
 export const Memoji = styled.div`
-  width: 70%;
+  width: 30%;
   display: flex;
   justify-content:end;
   align-items: center;
